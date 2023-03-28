@@ -4,13 +4,18 @@
     box-sizing: border-box;
 }
 
+body{
+    position: relative;
+}
+
 .hero{
     min-height: 100vh;
     background: url(hero.jpeg) center/cover no-repeat;
     place-items: center;
     display: grid;
-    position: static;
 }
+
+/* MIDDLE MODAL */
 .modal{
     background-color: antiquewhite;
     width: 30em;
@@ -18,8 +23,8 @@
     place-items: center;
     display: grid;
     border-radius: 5px;
-    position: relative;
-    z-index: 10;
+    /* position: absolute; */
+    /* z-index: 10; */
 }
 .modal h1{
     margin-bottom: 1em;
@@ -39,23 +44,30 @@
 }
 
 .modal-overlay{
-    background-color: rgb(209, 166, 101);
+    background: rgb(209, 166, 101);
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     display: grid;
     place-items: center;
-    z-index: 1;
-    opacity: .5;
-}
+    z-index: -10;
+    /* visibility: hidden; */
+    }
 .modal-container{
     background-color: white;
     width: 30em;
     padding: 2em;
+    display: grid;
+    place-items: center;
     text-align: center;
     border-radius: 5px;
     position: relative;
-    z-index: 20;
+    z-index: 99;
+    height: 40vh;
+}
+.show-modal{
+    visibility: visible;
+    z-index: 10;
 }
