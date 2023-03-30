@@ -17,7 +17,7 @@ body{
 
 /* MIDDLE MODAL */
 .modal{
-    background-color: antiquewhite;
+    background-color: rgb(250, 235, 215);
     width: 30em;
     padding: 4em;
     place-items: center;
@@ -44,7 +44,7 @@ body{
 }
 
 .modal-overlay{
-    background: rgb(209, 166, 101);
+    background: rgba(245, 209, 161, 0.5);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -59,13 +59,28 @@ body{
     background-color: white;
     width: 30em;
     padding: 2em;
-    display: grid;
-    place-items: center;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 5px;
     position: relative;
     z-index: 99;
     height: 40vh;
+    
+}
+.modal-container button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    font-size: 1.5em;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.modal-container h2{
+    margin: auto;
 }
 .show-modal{
     visibility: visible;
